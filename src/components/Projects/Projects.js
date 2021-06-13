@@ -1,16 +1,26 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Projects.css";
 import Card from "../Card/Card";
 import mesto from "../../image/mesto.png";
 import movies from "../../image/movies.png";
 import how from "../../image/how.png";
 import travel from "../../image/travel.png";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 function Projects() {
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
   return (
     <>
-      <div className="projects" id="portfolio">
-        <h2 className="projects__title">Портфолио</h2>
+      <div
+        className="projects"
+        id="portfolio"
+        data-aos="fade-up"
+        data-aos-anchor-placement="top-center"
+      >
+        <h2 className="projects__title">Portfolio</h2>
         <div className="projects__container">
           <div className="projects__wrapper">
             <ul className="projects__items">

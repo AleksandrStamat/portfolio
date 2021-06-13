@@ -1,18 +1,27 @@
-import React from "react";
+import React, { useEffect } from "react";
 import foto2 from "../../image/foto2.jpeg";
 import "./AboutMe.css";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 function AboutMe() {
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
   return (
     <>
       <section id="about-me" className="about-me">
         <div className="about-me__container">
-          <h2 className="about-me__title">Обо мне</h2>
-          <p className="about-me__name">Александр</p>
-          <p className="about-me__profession">
+          <h2 className="about-me__title" data-aos="fade-left">
+            About Me
+          </h2>
+          <p className="about-me__name" data-aos="fade-right">
+            Александр
+          </p>
+          <p className="about-me__profession" data-aos="fade-right">
             Начинающий фронтенд-разработчик, 24 года
           </p>
-          <p className="about-me__text">
+          <p className="about-me__text" data-aos="fade-right">
             Живу в Москве. Всегда пытался найти себя, пробовал себя во многих
             сферах, но понимал, что это не моё. После того, как прошёл курс по
             веб-разработке, начал заниматься фриланс-заказами и понял, что мне
@@ -25,6 +34,7 @@ function AboutMe() {
             src={foto2}
             alt="Фотография создателя."
             className="about-me__foto"
+            data-aos="fade-left"
           />
         </div>
       </section>

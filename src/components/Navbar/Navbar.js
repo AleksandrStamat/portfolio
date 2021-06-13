@@ -4,8 +4,8 @@ import logo from "../../image/logo.svg";
 import "./Navbar.css";
 
 function Navbar() {
-  const scrollToTop = () => scroll.scrollToTop();
   const [click, setClick] = useState(false);
+  const scrollToTop = () => scroll.scrollToTop();
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
 
@@ -30,7 +30,7 @@ function Navbar() {
                 to="home"
                 spy={true}
                 smooth={true}
-                offset={-30}
+                offset={-80}
                 duration={500}
                 onClick={closeMobileMenu}
               >
@@ -58,7 +58,7 @@ function Navbar() {
                 to="portfolio"
                 spy={true}
                 smooth={true}
-                offset={-60}
+                offset={-160}
                 duration={500}
                 onClick={closeMobileMenu}
               >
@@ -72,7 +72,7 @@ function Navbar() {
                 to="contacts"
                 spy={true}
                 smooth={true}
-                offset={-60}
+                offset={-30}
                 duration={500}
                 onClick={closeMobileMenu}
               >

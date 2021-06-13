@@ -1,13 +1,13 @@
 .projects {
-  padding: 2rem;
+  padding: 32px;
   background: #fff;
 }
 
 .projects__title {
-  font-size: 40px;
-  font-weight: 500;
+  font-size: 50px;
+  font-weight: 600;
   font-style: normal;
-  line-height: 27px;
+  line-height: 20px;
   color: #000;
   text-align: center;
 }
@@ -38,7 +38,7 @@
 
 @media only screen and (max-width: 768px) {
   .projects {
-    padding: 1rem;
+    padding: 16px;
   }
   .projects__container {
     padding: 0;
@@ -46,13 +46,9 @@
   .projects__wrapper {
     margin-bottom: 0;
   }
-}
-
-@media screen and (max-width: 400px) {
   .projects__title {
-    font-size: 30px;
-    line-height: 22px;
+    font-size: 35px;
+    font-weight: 600;
     padding: 0;
-    margin: 10px 0 20px;
   }
 }

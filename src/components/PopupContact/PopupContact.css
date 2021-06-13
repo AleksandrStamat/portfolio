@@ -29,8 +29,7 @@
   width: 90vw;
   min-width: 240px;
   max-width: 430px;
-  padding: 34px 36px 36px;
-  border-radius: 10px;
+  padding: 25px;
   background-color: #fff;
 }
 
@@ -55,14 +54,13 @@
 }
 .popup-contact__title {
   font-family: "Inter", "Arial", "Helvetica", sans-serif;
-  font-size: 28px;
-  font-weight: normal;
+  font-size: 25px;
+  font-weight: 600;
   font-style: normal;
-  line-height: 32px;
   margin: 0;
   text-align: center;
   color: #000;
-  padding-bottom: 30px;
+  padding-bottom: 10px;
 }
 
 .popup-contact__field-list {
@@ -132,7 +130,6 @@
   color: #fff;
   border: none;
   outline: 0;
-  border-radius: 3px;
   background: #000;
 }
 
@@ -151,7 +148,6 @@
     font-size: calc((100vw - 320px) / (600 - 320) * (18 - 14) + 14px);
     line-height: calc((100vw - 320px) / (600 - 320) * (22 - 17) + 17px);
     height: calc((100vw - 320px) / (600 - 320) * (50.15 - 40) + 40px);
-    margin-top: calc((100vw - 320px) / (600 - 320) * (31 - 19) + 19px);
   }
   .popup-contact__container {
     width: 80vw;
@@ -180,10 +176,9 @@
   .popup-contact__title {
     margin-bottom: 80px;
   }
-
-  .contacts__description,
-  .contacts__link {
-    font-size: 12px;
-    line-height: 15px;
+}
+@media screen and (max-height: 650px) {
+  .popup-contact__field-list {
+    margin-bottom: 12px;
   }
 }

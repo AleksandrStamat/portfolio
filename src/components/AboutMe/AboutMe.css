@@ -17,10 +17,10 @@
   text-align: center;
   grid-column-start: 1;
   grid-column-end: 3;
-  font-size: 40px;
-  font-weight: 500;
+  font-size: 50px;
+  font-weight: 600;
   font-style: normal;
-  line-height: 27px;
+  line-height: 20px;
   width: 100%;
   margin: 0;
   padding-bottom: 23px;
@@ -30,8 +30,8 @@
 }
 
 .about-me__name {
-  font-size: 35px;
-  font-weight: normal;
+  font-size: 40px;
+  font-weight: 500;
   font-style: normal;
   line-height: 58px;
   margin-bottom: 10px;
@@ -40,8 +40,8 @@
 }
 
 .about-me__profession {
-  font-size: 14px;
-  font-weight: normal;
+  font-size: 20px;
+  font-weight: 600;
   font-style: normal;
   line-height: 20px;
   margin-bottom: 20px;
@@ -51,8 +51,8 @@
 
 .about-me__text {
   max-width: 750px;
-  font-size: 14px;
-  font-weight: normal;
+  font-size: 18px;
+  font-weight: 500;
   font-style: normal;
   line-height: 22px;
   margin: 0 0 40px;
@@ -94,8 +94,9 @@
     padding: 0;
   }
   .about-me__name {
+    font-weight: 600;
     text-align: center;
-    font-size: 40px;
+    font-size: 30px;
     line-height: 30px;
     margin-bottom: 20px;
   }
@@ -114,12 +115,16 @@
     max-width: 100%;
     font-size: 16px;
     line-height: 26px;
+    margin: 0;
   }
   .about-me {
     grid-template: repeat(6, auto) / 1fr;
     grid-column-gap: 0;
   }
   .about-me__title {
+    padding: 0;
+    margin: 10px 0 40px;
+    font-size: 35px;
     grid-column-start: 1;
     grid-column-end: 2;
   }
@@ -132,16 +137,8 @@
     grid-row-end: 3;
   }
 }
-
 @media screen and (max-width: 400px) {
-  .about-me__name {
-    font-size: 28px;
-    line-height: 30px;
-  }
   .about-me__title {
-    font-size: 30px;
-    line-height: 22px;
-    padding: 0;
-    margin: 40px 0 40px;
+    font-size: 35px;
   }
 }

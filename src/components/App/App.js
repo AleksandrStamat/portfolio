@@ -8,9 +8,18 @@ import Footer from "../Footer/Footer";
 import Projects from "../Projects/Projects";
 import Contsacts from "../Contacts/Contacts";
 import PopupContact from "../PopupContact/PopupContact";
+import Preloader from "../Preloader/Preloader";
 
 function App() {
   const [isContactPopupOpen, setContactPopupOpen] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+
+  useEffect(() => {
+    setIsLoading(true);
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 4000);
+  }, []);
 
   useEffect(() => {
     window.addEventListener("keydown", handleEsc);
@@ -35,15 +44,19 @@ function App() {
 
   return (
     <>
-      <Router>
-        <Navbar />
-        <Hero id="home" />
-        <AboutMe id="about-me" />
-        <Projects id="portfolio" />
-        <Contsacts id="contacts" onContactClick={handleContactClick} />
-        <PopupContact isOpen={isContactPopupOpen} onClose={closeAllPopups} />
-        <Footer />
-      </Router>
+      {isLoading ? (
+        <Preloader />
+      ) : (
+        <Router>
+          <Navbar />
+          <Hero id="home" />
+          <AboutMe id="about-me" />
+          <Projects id="portfolio" />
+          <Contsacts id="contacts" onContactClick={handleContactClick} />
+          <PopupContact isOpen={isContactPopupOpen} onClose={closeAllPopups} />
+          <Footer />
+        </Router>
+      )}
     </>
   );
 }

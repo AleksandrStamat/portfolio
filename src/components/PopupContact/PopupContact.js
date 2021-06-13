@@ -1,6 +1,7 @@
 import React from "react";
 import "./PopupContact.css";
 import { useFormWithValidation } from "../../utils/formValidation";
+import send from "../../utils/send.php";
 
 function PopupContact(props) {
   const validate = useFormWithValidation();
@@ -15,7 +16,7 @@ function PopupContact(props) {
           }
         }}
       >
-        <form className="popup-contact__container">
+        <form className="popup-contact__container" method="post" action={send}>
           <button
             type="button"
             onClick={props.onClose}
@@ -69,12 +70,12 @@ function PopupContact(props) {
               </label>
               <input
                 className="popup-contact__input"
-                name="tel"
+                name="phone"
                 label="tel"
                 type="tel"
                 // value='+7(___)___-__-__'
                 pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}"
-                // placeholder='+7(___)___-__-__'
+                placeholder="+7(___)___-__-__"
                 required
               />
               <span className="popup-contact__error">
@@ -86,7 +87,7 @@ function PopupContact(props) {
                 Message
               </label>
               <input
-                name="text"
+                name="msg"
                 type="textarea"
                 label="text"
                 className="popup-contact__input"
