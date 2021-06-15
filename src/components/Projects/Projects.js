@@ -7,10 +7,12 @@ import how from "../../image/how.png";
 import travel from "../../image/travel.png";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import { options } from '../../utils/constants'
+
 
 function Projects() {
   useEffect(() => {
-    Aos.init({ duration: 2000 });
+    Aos.init(options);
   }, []);
   return (
     <>

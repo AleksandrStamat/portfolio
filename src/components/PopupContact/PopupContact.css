@@ -88,7 +88,8 @@
   color: #a0a0a0;
 }
 
-.popup-contact__input {
+.popup-contact__input,
+.PhoneInput input {
   font-family: "Inter", "Arial", "Helvetica", sans-serif;
   font-size: 13px;
   font-weight: 500;

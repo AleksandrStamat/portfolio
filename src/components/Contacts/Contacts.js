@@ -2,10 +2,10 @@ import React, { useEffect } from "react";
 import "./Contacts.css";
 import Aos from "aos";
 import "aos/dist/aos.css";
-
+import { options } from '../../utils/constants'
 function Contacts({ onContactClick }) {
   useEffect(() => {
-    Aos.init({ duration: 2000 });
+    Aos.init(options);
   }, []);
   return (
     <>

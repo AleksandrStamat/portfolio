@@ -3,10 +3,12 @@ import foto2 from "../../image/foto2.jpeg";
 import "./AboutMe.css";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import { options } from '../../utils/constants'
+
 
 function AboutMe() {
   useEffect(() => {
-    Aos.init({ duration: 2000 });
+    Aos.init(options);
   }, []);
   return (
     <>

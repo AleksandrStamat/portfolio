@@ -1,11 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import "./PopupContact.css";
 import { useFormWithValidation } from "../../utils/formValidation";
-import send from "../../utils/send.php";
-
+import { sendForm } from '../../utils/api';
+import PhoneInput from 'react-phone-number-input';
+import 'react-phone-number-input/style.css';
 function PopupContact(props) {
+  const [phone, setPhone] = useState("")
   const validate = useFormWithValidation();
-
+  function formReset() {
+    setPhone('');
+    validate.resetForm();
+  }
+  function handleForm(e) {
+    e.preventDefault();
+    formReset();
+    sendForm({...validate.values, phone })
+      .then(() => {
+        props.onClose();
+      });
+  }
   return (
     <>
       <div
@@ -16,7 +29,7 @@ function PopupContact(props) {
           }
         }}
       >
-        <form className="popup-contact__container" method="post" action={send}>
+        <form className="popup-contact__container" onSubmit={handleForm}>
           <button
             type="button"
             onClick={props.onClose}
@@ -55,7 +68,7 @@ function PopupContact(props) {
                   validate.errors.email ? "popup-contact__input_error" : ""
                 }`}
                 name="email"
-                label="e-mail"
+                label="email"
                 type="email"
                 value={validate.values.email || ""}
                 required
@@ -68,15 +81,8 @@ function PopupContact(props) {
               <label htmlFor="tel" className="popup-contact__label">
                 Telephone
               </label>
-              <input
-                className="popup-contact__input"
-                name="phone"
-                label="tel"
-                type="tel"
-                // value='+7(___)___-__-__'
-                pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}"
-                placeholder="+7(___)___-__-__"
-                required
+              <PhoneInput
+                onChange={setPhone} value={phone || ''} required
               />
               <span className="popup-contact__error">
                 {validate.errors.tel || ""}
@@ -86,11 +92,14 @@ function PopupContact(props) {
               <label htmlFor="text" className="popup-contact__label">
                 Message
               </label>
-              <input
+              <textarea
+                rows="3"
+                onChange={validate.handleChange}
                 name="msg"
                 type="textarea"
                 label="text"
                 className="popup-contact__input"
+                value={validate.values.msg || ''}
               />
             </div>
           </fieldset>
