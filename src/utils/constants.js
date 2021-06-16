@@ -1,1 +1,1 @@
-export const options = { duration: 1500};
+export const options = { duration: 1500 };

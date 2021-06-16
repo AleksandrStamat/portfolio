@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState} from "react";
 import { Link, animateScroll as scroll } from "react-scroll";
 import logo from "../../image/logo.svg";
 import "./Navbar.css";
@@ -6,8 +6,9 @@ import "./Navbar.css";
 function Navbar() {
   const [click, setClick] = useState(false);
   const scrollToTop = () => scroll.scrollToTop();
-  const handleClick = () => setClick(!click);
-  const closeMobileMenu = () => setClick(false);
+  const handleClick = () => setClick(!click, document.body.style.overflow = 'hidden');
+  const closeMobileMenu = () => setClick(false,document.body.style.overflow = 'visible');
+
 
   return (
     <>
@@ -19,8 +20,8 @@ function Navbar() {
             alt="Logo"
             onClick={scrollToTop}
           />
-          <div className="menu-icon" onClick={handleClick}>
-            <i className={click ? "fas fa-times" : "fas fa-bars"} />
+          <div className="menu-icon" onClick={handleClick} >
+            <i className={click ? "fas fa-times" : "fas fa-bars"}/>
           </div>
           <ul className={click ? "nav-items active" : "nav-items"}>
             <li className="nav-item">
@@ -72,7 +73,7 @@ function Navbar() {
                 to="contacts"
                 spy={true}
                 smooth={true}
-                offset={-100}
+                offset={-60}
                 duration={500}
                 onClick={closeMobileMenu}
               >

@@ -11,11 +11,11 @@ function Contacts({ onContactClick }) {
   return (
     <>
       <section className="contacts" id="contacts">
-        <h2 className="contacts__title" data-aos="zoom-in">
+        <h2 className="contacts__title" data-aos="zoom-in" data-aos-once={true}>
           Контакты
         </h2>
         <div className="contacts__container">
-          <div className="contacts__wrapper" data-aos="fade-right">
+          <div className="contacts__wrapper" data-aos="fade-right" data-aos-once={true}>
             <p className="contacts__heading">
               Буду рад сотрудничеству или просто общению, поэтому для связи со
               мной, используйте контактную форму
@@ -23,16 +23,25 @@ function Contacts({ onContactClick }) {
             <p className="contacts__text">Контактная информация:</p>
             <p className="contacts__text">
               Email:
-              <span className="contacts__span">stamat.aleksandr@yandex.ru</span>
+              <a
+                className="contacts__span"
+                href="mailto:stamat.aleksandr@yandex.ru"
+              >
+                stamat.aleksandr@yandex.ru
+              </a>
             </p>
             <p className="contacts__text">
-              Tel: <span className="contacts__span">+7(926)886-21-38</span>
+              Tel:
+              <a className="contacts__span" href="tel:+79268862138">
+                +7(926)886-21-38
+              </a>
             </p>
           </div>
           <button
             className="contacts__button"
             onClick={onContactClick}
             data-aos="fade-left"
+            data-aos-once={true}
           >
             Поговорим?
           </button>

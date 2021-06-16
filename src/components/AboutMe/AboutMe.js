@@ -13,16 +13,16 @@ function AboutMe() {
     <>
       <section id="about-me" className="about-me">
         <div className="about-me__container">
-          <h2 className="about-me__title" data-aos="fade-left">
+          <h2 className="about-me__title" data-aos="fade-left" data-aos-once={true}>
             Обо мне
           </h2>
-          <p className="about-me__name" data-aos="fade-right">
+          <p className="about-me__name" data-aos="fade-right" data-aos-once={true}>
             Александр
           </p>
-          <p className="about-me__profession" data-aos="fade-right">
+          <p className="about-me__profession" data-aos="fade-right" data-aos-once={true}>
             Фронтенд-разработчик, 24 года
           </p>
-          <p className="about-me__text" data-aos="fade-right">
+          <p className="about-me__text" data-aos="fade-right" data-aos-once={true}>
             Живу в Москве. Всегда пытался найти себя, пробовал себя во многих
             сферах, но понимал, что это не моё. После того, как прошёл курс по
             веб-разработке, начал заниматься фриланс-заказами и понял, что мне
@@ -36,6 +36,7 @@ function AboutMe() {
             alt="Фотография создателя."
             className="about-me__foto"
             data-aos="fade-left"
+            data-aos-once={true}
           />
         </div>
       </section>

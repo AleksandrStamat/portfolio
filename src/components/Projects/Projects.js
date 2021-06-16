@@ -20,6 +20,7 @@ function Projects() {
         id="portfolio"
         data-aos="fade-up"
         data-aos-anchor-placement="top-center"
+        data-aos-once={true}
       >
         <h2 className="projects__title">Портфолио</h2>
         <div className="projects__container">
@@ -28,12 +29,12 @@ function Projects() {
               <Card
                 src={mesto}
                 text="Mesto"
-                href="https://mesto.stamat.nomoredomains.club"
+                href="https://mesto.astamat.ru/"
               />
               <Card
                 src={movies}
                 text="Movies Explorer"
-                href="https://movies.stamat.nomoredomains.icu/"
+                href="https://movies.astamat.ru/"
               />
             </ul>
             <ul className="projects__items">

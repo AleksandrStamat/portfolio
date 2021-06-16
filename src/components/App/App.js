@@ -6,8 +6,8 @@ import AboutMe from "../AboutMe/AboutMe";
 import Hero from "../Hero/Hero";
 import Footer from "../Footer/Footer";
 import Projects from "../Projects/Projects";
-import Contsacts from "../Contacts/Contacts";
-import PopupContact from "../PopupContact/PopupContact";
+import Contacts from "../Contacts/Contacts";
+import ContactPopup from "../ContactPopup/ContactPopup";
 import Preloader from "../Preloader/Preloader";
 
 function App() {
@@ -52,8 +52,8 @@ function App() {
           <Hero id="home" />
           <AboutMe id="about-me" />
           <Projects id="portfolio" />
-          <Contsacts id="contacts" onContactClick={handleContactClick} />
-          <PopupContact isOpen={isContactPopupOpen} onClose={closeAllPopups} />
+          <Contacts id="contacts" onContactClick={handleContactClick} />
+          <ContactPopup isOpen={isContactPopupOpen} onClose={closeAllPopups} />
           <Footer />
         </Router>
       )}

@@ -13,7 +13,6 @@
 }
 
 .projects__container {
-  padding: 20px;
   display: flex;
   flex-flow: column;
   max-width: 1280px;
@@ -40,12 +39,15 @@
   .projects {
     padding: 16px;
   }
+
   .projects__container {
     padding: 0;
   }
+
   .projects__wrapper {
     margin-bottom: 0;
   }
+
   .projects__title {
     font-size: 35px;
     font-weight: 600;
