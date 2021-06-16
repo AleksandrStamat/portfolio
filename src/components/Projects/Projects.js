@@ -7,8 +7,7 @@ import how from "../../image/how.png";
 import travel from "../../image/travel.png";
 import Aos from "aos";
 import "aos/dist/aos.css";
-import { options } from '../../utils/constants'
-
+import { options } from "../../utils/constants";
 
 function Projects() {
   useEffect(() => {
@@ -22,7 +21,7 @@ function Projects() {
         data-aos="fade-up"
         data-aos-anchor-placement="top-center"
       >
-        <h2 className="projects__title">Portfolio</h2>
+        <h2 className="projects__title">Портфолио</h2>
         <div className="projects__container">
           <div className="projects__wrapper">
             <ul className="projects__items">

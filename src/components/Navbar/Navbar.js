@@ -34,7 +34,7 @@ function Navbar() {
                 duration={500}
                 onClick={closeMobileMenu}
               >
-                Home
+                Главная
               </Link>
             </li>
             <li className="nav-item">
@@ -48,7 +48,7 @@ function Navbar() {
                 duration={500}
                 onClick={closeMobileMenu}
               >
-                About Me
+                Обо мне
               </Link>
             </li>
             <li className="nav-item">
@@ -62,7 +62,7 @@ function Navbar() {
                 duration={500}
                 onClick={closeMobileMenu}
               >
-                Portfolio
+                Портфолио
               </Link>
             </li>
             <li className="nav-item">
@@ -72,11 +72,11 @@ function Navbar() {
                 to="contacts"
                 spy={true}
                 smooth={true}
-                offset={-30}
+                offset={-80}
                 duration={500}
                 onClick={closeMobileMenu}
               >
-                Contacts
+                Контакты
               </Link>
             </li>
           </ul>

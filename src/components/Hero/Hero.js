@@ -10,12 +10,12 @@ function Hero() {
     <>
       {/* <video className="hero-video" src={video} autoPlay loop muted /> */}
       <div className="hero-container" id="home">
-        <img className="hero-foto" alt="by Akin" src={foto} />
-        <h1 className="hero-title">Hello, I'm Aleksandr</h1>
+        <img className="hero-foto" alt="Александр" src={foto} />
+        <h1 className="hero-title">Привет, Я Александр</h1>
         <Typed
           className="hero-text"
-          strings={["Front-End Developer", "Web Designer"]}
-          typeSpeed={70}
+          strings={["Веб-Разработчик", "Веб-Дизайнер"]}
+          typeSpeed={60}
           backSpeed={60}
           loop
         />

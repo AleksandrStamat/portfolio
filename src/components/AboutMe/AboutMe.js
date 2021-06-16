@@ -3,8 +3,7 @@ import foto2 from "../../image/foto2.jpeg";
 import "./AboutMe.css";
 import Aos from "aos";
 import "aos/dist/aos.css";
-import { options } from '../../utils/constants'
-
+import { options } from "../../utils/constants";
 
 function AboutMe() {
   useEffect(() => {
@@ -15,13 +14,13 @@ function AboutMe() {
       <section id="about-me" className="about-me">
         <div className="about-me__container">
           <h2 className="about-me__title" data-aos="fade-left">
-            About Me
+            Обо мне
           </h2>
           <p className="about-me__name" data-aos="fade-right">
             Александр
           </p>
           <p className="about-me__profession" data-aos="fade-right">
-            Начинающий фронтенд-разработчик, 24 года
+            Фронтенд-разработчик, 24 года
           </p>
           <p className="about-me__text" data-aos="fade-right">
             Живу в Москве. Всегда пытался найти себя, пробовал себя во многих

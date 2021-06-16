@@ -1,23 +1,22 @@
 import React, { useState } from "react";
 import "./PopupContact.css";
 import { useFormWithValidation } from "../../utils/formValidation";
-import { sendForm } from '../../utils/api';
-import PhoneInput from 'react-phone-number-input';
-import 'react-phone-number-input/style.css';
+import { sendForm } from "../../utils/api";
+import PhoneInput from "react-phone-number-input";
+import "react-phone-number-input/style.css";
 function PopupContact(props) {
-  const [phone, setPhone] = useState("")
+  const [phone, setPhone] = useState("");
   const validate = useFormWithValidation();
   function formReset() {
-    setPhone('');
+    setPhone("");
     validate.resetForm();
   }
   function handleForm(e) {
     e.preventDefault();
     formReset();
-    sendForm({...validate.values, phone })
-      .then(() => {
-        props.onClose();
-      });
+    sendForm({ ...validate.values, phone }).then(() => {
+      props.onClose();
+    });
   }
   return (
     <>
@@ -35,11 +34,11 @@ function PopupContact(props) {
             onClick={props.onClose}
             className="popup-contact__button-close"
           ></button>
-          <h2 className="popup-contact__title">Contact Me</h2>
+          <h2 className="popup-contact__title">Свяжитесь со мной</h2>
           <fieldset className="popup-contact__field-list">
             <div className="popup-contact__field">
               <label htmlFor="name" className="popup-contact__label">
-                Your Name
+                Ваше имя
               </label>
               <input
                 onChange={validate.handleChange}
@@ -60,7 +59,7 @@ function PopupContact(props) {
             </div>
             <div className="popup-contact__field">
               <label htmlFor="email" className="popup-contact__label">
-                Your E-mail
+                Ваш email
               </label>
               <input
                 onChange={validate.handleChange}
@@ -79,27 +78,25 @@ function PopupContact(props) {
             </div>
             <div className="popup-contact__field">
               <label htmlFor="tel" className="popup-contact__label">
-                Telephone
+                Ваш телефон
               </label>
-              <PhoneInput
-                onChange={setPhone} value={phone || ''} required
-              />
+              <PhoneInput onChange={setPhone} value={phone || ""} required />
               <span className="popup-contact__error">
                 {validate.errors.tel || ""}
               </span>
             </div>
             <div className="popup-contact__field">
               <label htmlFor="text" className="popup-contact__label">
-                Message
+                Ваше сообщение
               </label>
               <textarea
-                rows="3"
+                rows="2"
                 onChange={validate.handleChange}
                 name="msg"
                 type="textarea"
                 label="text"
                 className="popup-contact__input"
-                value={validate.values.msg || ''}
+                value={validate.values.msg || ""}
               />
             </div>
           </fieldset>
@@ -110,7 +107,7 @@ function PopupContact(props) {
             type="submit"
             disabled={!validate.isValid}
           >
-            Send
+            Отправить
           </button>
         </form>
       </div>

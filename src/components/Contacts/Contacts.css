@@ -4,6 +4,7 @@
 }
 
 .contacts__title {
+  padding: 10px 0px;
   font-size: 50px;
   font-weight: 600;
   font-style: normal;
@@ -13,7 +14,7 @@
 }
 
 .contacts__container {
-  padding: 20px;
+  padding: 20px 40px 55px;
   display: flex;
   flex-flow: row;
   max-width: 1280px;
@@ -23,7 +24,7 @@
 }
 .contacts__wrapper {
   position: relative;
-  margin: 50px 0 50px;
+  margin: 80px 0 ;
   display: flex;
   flex-direction: column;
 }
@@ -33,7 +34,7 @@
   font-weight: normal;
   font-style: normal;
   line-height: 22px;
-  padding-bottom: 15px;
+  padding-bottom: 30px;
 }
 .contacts__text {
   max-width: 500px;
@@ -41,7 +42,7 @@
   font-weight: bold;
   font-style: normal;
   line-height: 22px;
-  padding-bottom: 10px;
+  padding-bottom: 15px;
 }
 .contacts__span {
   padding-left: 10px;
