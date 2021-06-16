@@ -1,5 +1,5 @@
 .contacts {
-  padding: 32px;
+  padding: 40px;
   background: #fff;
 }
 
@@ -14,7 +14,7 @@
 }
 
 .contacts__container {
-  padding: 20px 40px 55px;
+  padding: 25px 40px 60px;
   display: flex;
   flex-flow: row;
   max-width: 1280px;
