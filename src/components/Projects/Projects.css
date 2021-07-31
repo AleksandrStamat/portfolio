@@ -1,15 +1,19 @@
 .projects {
-  padding: 32px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 60px 30px;
   background: #fff;
+  overflow: hidden;
 }
 
 .projects__title {
+  margin: 0;
   font-size: 50px;
   font-weight: 600;
   font-style: normal;
-  line-height: 20px;
   color: #000;
   text-align: center;
+
 }
 
 .projects__container {
@@ -21,6 +25,7 @@
 }
 
 .projects__wrapper {
+  overflow: hidden;
   position: relative;
   margin: 50px 0 0px;
 }
@@ -37,7 +42,7 @@
 
 @media only screen and (max-width: 768px) {
   .projects {
-    padding: 16px;
+    padding: calc((100vw - 400px) / (768 - 400) * (20 - 10) + 25px);
   }
 
   .projects__container {

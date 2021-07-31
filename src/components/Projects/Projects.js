@@ -15,29 +15,33 @@ function Projects() {
   }, []);
   return (
     <>
-      <div
-        className="projects"
-        id="portfolio"
-        data-aos="fade-up"
-        data-aos-anchor-placement="top-center"
-        data-aos-once={true}
-      >
-        <h2 className="projects__title">Портфолио</h2>
+      <div className="projects" id="portfolio">
+        <h2
+          className="projects__title"
+          data-aos="fade-right"
+          data-aos-once={true}
+        >
+          Портфолио
+        </h2>
         <div className="projects__container">
           <div className="projects__wrapper">
-            <ul className="projects__items">
-              <Card
-                src={mesto}
-                text="Mesto"
-                href="https://mesto.astamat.ru/"
-              />
+            <ul
+              className="projects__items"
+              data-aos="fade-left"
+              data-aos-once={true}
+            >
+              <Card src={mesto} text="Mesto" href="https://mesto.astamat.ru/" />
               <Card
                 src={movies}
                 text="Movies Explorer"
                 href="https://movies.astamat.ru/"
               />
             </ul>
-            <ul className="projects__items">
+            <ul
+              className="projects__items"
+              data-aos="fade-right"
+              data-aos-once={true}
+            >
               <Card
                 src={how}
                 text="How-to-learn"

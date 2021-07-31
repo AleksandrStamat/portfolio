@@ -15,26 +15,27 @@
   width: 300px;
   height: 300px;
   border-radius: 150px;
-  border: 8px white solid;
+  border: 10px white solid;
   object-fit: cover;
 }
 
 .hero-title {
   color: #fff;
-  font-size: 84px;
+  font-size: 80px;
   font-weight: 600;
   margin: 30px auto;
 }
 
 .hero-text {
   color: #fff;
-  font-size: 55px;
+  font-size: 50px;
   font-weight: 500;
 }
 
 @media screen and (max-width: 960px) {
   .hero-title {
-    font-size: 55px;
+    margin: 20px 2px;
+    font-size: 50px;
   }
   .hero-text {
     font-size: 30px;
@@ -67,6 +68,6 @@
   }
   .hero-text {
     padding-bottom: 50px;
-    font-size: 25px;
+    font-size: 28px;
   }
 }

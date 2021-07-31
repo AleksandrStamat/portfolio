@@ -3,6 +3,7 @@ import Typed from "react-typed";
 import "./Hero.css";
 import foto from "../../image/foto.jpeg";
 
+
 function Hero() {
   return (
     <>
@@ -11,9 +12,9 @@ function Hero() {
         <h1 className="hero-title">Привет, Я Александр</h1>
         <Typed
           className="hero-text"
-          strings={["Веб-Разработчик", "Веб-Дизайнер"]}
-          typeSpeed={60}
-          backSpeed={60}
+          strings={["Веб-Разработчик", "Веб-Дизайнер", "Люблю ягодки"]}
+          typeSpeed={50}
+          backSpeed={50}
           loop
         />
       </div>
